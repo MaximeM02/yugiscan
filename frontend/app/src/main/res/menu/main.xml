@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- first group (sort) -->
+    <group
+        android:id="@+id/sort_group"
+        android:checkableBehavior="single">
+        <!-- sort group's items -->
+        <item
+            android:title="Trier par"
+            android:enabled="false"
+            android:checkable="false" />
+        <item
+            android:id="@+id/group_sort_date"
+            android:title="Date"
+            android:checked="true" />
+        <item
+            android:id="@+id/group_sort_name"
+            android:title="Nom" />
+        <item
+            android:id="@+id/group_sort_completion"
+            android:title="Achévement" />
+    </group>
+    <!-- second group (order) -->
+    <group
+        android:id="@+id/order_group"
+        android:checkableBehavior="single">
+        <!-- order group's items -->
+        <item
+            android:title="Ordre"
+            android:enabled="false"
+            android:checkable="false" />
+        <item
+            android:id="@+id/group_order_asc"
+            android:title="Ascendant" />
+        <item
+            android:id="@+id/group_order_desc"
+            android:title="Descendant"
+            android:checked="true" />
+
+    </group>
+
+    <item android:id="@+id/search"
+        android:title=""
+        android:icon="@drawable/ic_search"
+        app:showAsAction="collapseActionView|ifRoom"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+</menu>
+

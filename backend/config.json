@@ -1,0 +1,61 @@
+{
+    "core_configuration": true,
+    "default_configuration": "prod",
+    "configurations": {
+        "local": {
+          "alpha": "yugiscan-api-dev.cro.st.com",
+          "databases": "$config({{home}}/configs/databases_local)"
+        },
+        "local-dev": {
+          "alpha": "yugiscan-api-dev.cro.st.com",
+          "databases": "$config({{home}}/configs/databases_dev)"
+        },
+        "dev": {
+          "alpha": "yugiscan-api-dev.cro.st.com",
+          "databases": "$config({{home}}/configs/databases_dev)"
+        },
+        "int": {
+          "databases": "$config({{home}}/configs/databases_int)"
+        },
+        "prod": {
+          "databases": "$config({{home}}/configs/databases_prod)"
+        }
+      },
+    "configs": {},
+    "colors": {
+        "loggers": {
+            "rules": "$config({{project}}/configs/main/loggers_colors.json)",
+            "active": true
+        }
+    },
+    "exceptions": [
+    ],
+    "environment": {
+        "NLS_LANG": "FRENCH_FRANCE.WE8ISO8859P1"
+    },
+    "envs": {
+        "HOME": "{{home}}"
+    },
+    "loggers": "$config({{project}}/configs/main/loggers.json)",
+    "project_name": "Dream",
+    "root": "/homepip/{{user}}/applications",
+    "home": "/home/{{user}}",
+    "directories": {
+        "data": "{{root}}/data",
+        "logs": "{{root}}/logs",
+        "tmp": "{{root}}/tmp",
+        "tests": [
+            "tests",
+            "alphaz.tests"
+        ],
+        "database_models": [
+            "models.databases"
+        ]
+    },
+    "platforms": {
+        "windows": {
+          "root": "/alpha/{{user}}/yugiscan",
+          "home": "/alpha/{{user}}/yugiscan"
+        }
+      }
+}

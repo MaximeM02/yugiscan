@@ -1,0 +1,178 @@
+{
+    "core_configuration": true,
+    "default_configuration": "prod",
+    "configurations": {
+        "local": {
+            "debug": true,
+            "host_public": "",
+            "host_web": "",
+            "port": 5006,
+            "admin": true,
+            "admin_databases": true
+        },
+        "local-dev": {
+            "debug": true,
+            "host_public": "",
+            "host_web": "",
+            "port": 5006,
+            "ssl_cert": "",
+            "ssl_key": "",
+            "admin": true,
+            "admin_databases": true
+        },
+        "dev": {
+            "debug": true,
+            "host_public": "",
+            "host_web": "",
+            "port": 5000,
+            "ssl": "y",
+            "ssl_cert": "{{root}}/yugiscan/ssl/client-cert.pem",
+            "ssl_key": "{{root}}/yugiscan/ssl/client-key.pem",
+            "admin": true,
+            "admin_databases": true
+        },
+        "prod": {
+            "debug": false,
+            "host_public": "",
+            "host_web": "",
+            "port": 3000,
+            "ssl_cert": "",
+            "ssl_key": "y",
+            "mode": "wsgi"
+        }
+    },
+    "host": "",
+    "mail_contact": "",
+    "mail_key_signature": "<meta gomail>",
+    "mail_path": "mails",
+    "mail_sender": "",
+    "name": "Yugioh",
+    "mails": {
+        "mail_server": {
+            "host": "",
+            "mail": "",
+            "password": "",
+            "port": 465,
+            "server": "",
+            "ssl": true,
+            "tls": false
+        }
+    },
+    "ssl": false,
+    "threaded": true,
+    "parameters": {
+        "compagny": "YugiCorp",
+        "compagny_website": "https://www.yugicorp.com"
+    },
+    "templates": {
+        "home": {
+            "title": "YugiScan Webservice",
+            "description": "{{compagny}}"
+        }
+    },
+    "config": {
+        "MYSQL_DATABASE_CHARSET": "utf8mb4",
+        "SQLALCHEMY_TRACK_MODIFICATIONS": false,
+        "SQLALCHEMY_POOL_RECYCLE": 299,
+        "SQLALCHEMY_POOL_TIMEOUT": 30,
+        "SQLALCHEMY_POOL_SIZE": 10,
+        "JWT_SECRET_KEY": "CG32FNPZHFIAZ%HF%MAF655q5z4fKL89Nnih%iG1zfHMLZF",
+        "JSON_SORT_KEYS": false
+    },
+    "dashboard": {
+        "dashboard": {
+            "APP_VERSION": 1,
+            "SAMPLING_PERIOD": 20,
+            "ENABLE_LOGGING": true,
+            "active": false
+        },
+        "authentication": {
+            "USERNAME": "MES",
+            "PASSWORD": "",
+            "GUEST_USERNAME": "guest",
+            "GUEST_PASSWORD": [
+                "guest1",
+                "guest2"
+            ],
+            "SECURITY_TOKEN": "cc83733cb0af8b884ff6577086b87909"
+        },
+        "database": {
+            "DATABASE": "sqlite:///{{root}}/dashboard.db"
+        }
+    },
+    "routes": [
+        "apis.routes"
+    ],
+    "models": [
+        "models.databases"
+    ],
+    "root": "/home/{{user}}/applications",
+    "home": "/home/{{user}}",
+    "platforms": {
+        "windows": {
+            "root": "/alpha/{{user}}",
+            "home": "/alpha/{{user}}",
+            "host": "0.0.0.0"
+        }
+    },
+    "directories": {
+        "data": "{{root}}/data",
+        "logs": "{{root}}/logs",
+        "cache": "{{root}}/cache",
+        "database_models": [
+            "models.databases"
+        ]
+    },
+    "admins": {
+        "ips": [
+            "127.0.0.1"
+        ],
+        "password": ""
+    },
+    "routes_no_log": [
+        "//status",
+        "//static",
+        "//dashboard"
+    ],
+    "users": {
+        "mesdev": {
+            "debug": false,
+            "mode": "wsgi"
+        },
+        "mes": {
+            "debug": false,
+            "mode": "wsgi"
+        }
+    },
+    "admin_password": "",
+    "workers": 6,
+    "envs": {
+        "ORACLE_HOME": "/application/software/oracle/12.1.0.2"
+    },
+    "auth": {
+        "mode": "no_confirmation",
+        "ldap": {
+            "server": "ldap://ldapmanuf.cro.st.com:389",
+            "baseDN": "ou=people,dc=st,dc=com",
+            "users_filters": "(|(uid={uid})(st-secondaryuid={secondaryuid})(mail={mail})(cn={cn}))",
+            "user_filters": "(|(uid={username})(st-secondaryuid={username})(mail={username})(cn={username}))",
+            "user_data": {
+                "givenName": "name",
+                "sn": "lastname",
+                "st-secondaryuid": "short-login",
+                "c": "area",
+                "st-locationdescription": "location",
+                "st-seatnumber": "seat",
+                "telephoneNumber": "phone-number"
+            }
+        },
+        "users": {
+            "mesadm": {
+                "user_roles": [
+                    "SUPER_USER"
+                ]
+            }
+        }
+    },
+    "reloader_type": "stat"
+}

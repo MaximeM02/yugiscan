@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!-- Header aligned to top -->
+        <RelativeLayout
+            android:id="@+id/card_details_e_header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/main2"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/card_details_e_name_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:textColor="@color/main1_v2"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <!-- Footer aligned to bottom -->
+        <RelativeLayout
+            android:id="@+id/card_details_e_footer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main2"
+            android:gravity="center" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/card_details_minus_button"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    style="@style/AppTheme.Button.TextAppearance"
+                    android:theme="@style/AppTheme.Button"
+                    android:text="-"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/card_details_add_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </com.google.android.material.button.MaterialButton>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/card_details_add_button"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    style="@style/AppTheme.Button.TextAppearance"
+                    android:theme="@style/AppTheme.Button"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </com.google.android.material.button.MaterialButton>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/card_details_plus_button"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    style="@style/AppTheme.Button.TextAppearance"
+                    android:theme="@style/AppTheme.Button"
+                    android:text="+"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/card_details_add_button"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </com.google.android.material.button.MaterialButton>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+        <!-- Scrollable Item below header and above footer -->
+        <ScrollView
+            android:id="@+id/card_details_scrollable"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/card_details_e_footer_layout"
+            android:background="@color/main1_v2"
+            android:layout_below="@id/card_details_e_header_layout" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/card_details_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/main2"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    android:gravity="center_horizontal"/>
+
+                <ImageView
+                    android:id="@+id/card_details_illustration"
+                    android:layout_width="230dp"
+                    android:layout_height="310dp"
+                    android:layout_margin="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/card_details_contribution_txt1"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"
+                        android:text="@string/fragment_card_details_contribution_txt" />
+
+                    <TextView
+                        android:id="@+id/card_details_contribution_txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"
+                        android:text="Impro_02"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/card_details_date_insert_txt1"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/main2"
+                        android:singleLine="true"
+                        android:text="@string/fragment_card_details_date_insert_txt" />
+
+                    <TextView
+                        android:id="@+id/card_details_date_insert_txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/card_details_date_update_txt1"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"
+                        android:text="@string/fragment_card_details_date_update_txt" />
+
+                    <TextView
+                        android:id="@+id/card_details_date_update_txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/card_details_code_txt1"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"
+                        android:text="@string/fragment_card_details_code_txt"/>
+
+                    <TextView
+                        android:id="@+id/card_details_code_txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/card_details_rarity_txt1"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"
+                        android:text="@string/fragment_card_details_rarity_txt"/>
+
+                    <TextView
+                        android:id="@+id/card_details_rarity_txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/card_details_level_txt1"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"
+                        android:text="@string/fragment_card_details_level_txt" />
+
+                    <TextView
+                        android:id="@+id/card_details_level_txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/card_details_attribute_txt1"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"
+                        android:text="@string/fragment_card_details_attribute_txt"/>
+
+                    <TextView
+                        android:id="@+id/card_details_attribute_txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/card_details_type_txt1"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"
+                        android:text="@string/fragment_card_details_type_txt" />
+
+                    <TextView
+                        android:id="@+id/card_details_type_txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/card_details_attack_txt1"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"
+                        android:text="@string/fragment_card_details_attack_txt"/>
+
+                    <TextView
+                        android:id="@+id/card_details_attack_txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/card_details_defense_txt1"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"
+                        android:text="@string/fragment_card_details_defense_txt"/>
+
+                    <TextView
+                        android:id="@+id/card_details_defense_txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/card_details_link_classification_txt1"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"
+                        android:text="@string/fragment_card_details_link_classification_txt"/>
+
+                    <TextView
+                        android:id="@+id/card_details_link_classification_txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main2"
+                        android:layout_margin="10dp"
+                        android:singleLine="true"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/card_details_description_txt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/main2"
+                    android:text="@string/fragment_card_details_description_txt"
+                    android:paddingTop="10dp"
+                    android:layout_margin="10dp"
+                    android:justificationMode="inter_word" />
+
+                <TextView
+                    android:id="@+id/card_details_description_txt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/main2"
+                    android:paddingTop="5dp"
+                    android:layout_margin="10dp"
+                    android:justificationMode="inter_word" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "YugiScan API DEV",
+            "type": "python",
+            "request": "launch",
+            "program": "api.py",
+            "env": {"ALPHA_CONF":"dev"},
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "YugiScan API PROD",
+            "type": "python",
+            "request": "launch",
+            "program": "api.py",
+            "env": {"ALPHA_CONF":"prod"},
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "YugiScan API local",
+            "type": "python",
+            "request": "launch",
+            "program": "api.py",
+            "env": {"ALPHA_CONF":"local"},
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }
+    ]
+}

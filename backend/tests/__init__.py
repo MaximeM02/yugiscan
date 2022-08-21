@@ -1,0 +1,1 @@
+from .apis.routes.yugiscan.test_card_template import * 

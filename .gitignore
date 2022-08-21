@@ -1,0 +1,4 @@
+backend/__pycache__
+*.pyc
+backend/tmp/configs.dmp
+backend/server_werkzeug.log

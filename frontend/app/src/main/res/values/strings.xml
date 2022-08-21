@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">YuGiOh App</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_logout">Déconnexion</string>
+
+    <!-- ************************************************ -->
+    <!-- Login fragment -->
+    <!-- ************************************************ -->
+
+    <!-- hint -->
+    <string name="fragment_login_pseudo_hint">Saisir le pseudo</string>
+    <string name="fragment_login_password_hint">Saisir le mot de passe</string>
+
+    <!-- error -->
+    <string name="login_error">Pseudo et/ou mot de passe incorrect(s) !</string>
+
+    <!-- label -->
+    <string name="fragment_login_connexion_button">Connexion</string>
+    <string name="fragment_login_registration_txt">Inscription</string>
+    <string name="fragment_login_remember_me_txt">Se souvenir de moi</string>
+
+    <!-- toast -->
+
+    <!-- ************************************************ -->
+    <!-- Register fragment -->
+    <!-- ************************************************ -->
+
+    <!-- hint -->
+    <string name="fragment_register_last_name_hint">Saisir un nom</string>
+    <string name="fragment_register_first_name_hint">Saisir un prénom</string>
+    <string name="fragment_register_email_address_hint">Saisir une adresse email</string>
+    <string name="fragment_register_pseudo_address_hint">Saisir un pseudo</string>
+    <string name="fragment_register_password1_hint">Saisir un mot de passe</string>
+    <string name="fragment_register_password2_hint">Saisir la confirmation du mot de passe</string>
+
+    <!-- error -->
+    <string name="fragment_register_last_name_error">Nom incorrect !</string>
+    <string name="fragment_register_first_name_error">Prénom incorrect !</string>
+    <string name="fragment_register_email_address_error">Adresse e-mail incorrect !</string>
+    <string name="fragment_register_pseudo_error">Pseudo incorrect !</string>
+    <string name="fragment_register_password1_error">Mot de passe incorrect !</string>
+    <string name="fragment_register_password2_error">Confirmation mot de passe incorrect !</string>
+
+    <!-- label -->
+    <string name="fragment_register_register_button">Inscription</string>
+    <string name="fragment_register_login_txt">Se connecter</string>
+
+    <!-- toast -->
+
+    <!-- ************************************************ -->
+    <!-- Card details fragment -->
+    <!-- ************************************************ -->
+
+    <!-- label -->
+    <string name="fragment_card_details_contribution_txt">Contribution de:</string>
+    <string name="fragment_card_details_date_insert_txt">Ajouté le:</string>
+    <string name="fragment_card_details_date_update_txt">Modifié le:</string>
+    <string name="fragment_card_details_code_txt">Code:</string>
+    <string name="fragment_card_details_rarity_txt">Rareté:</string>
+    <string name="fragment_card_details_level_txt">Niveau:</string>
+    <string name="fragment_card_details_attribute_txt">Attribut:</string>
+    <string name="fragment_card_details_type_txt">Type:</string>
+    <string name="fragment_card_details_attack_txt">Attaque:</string>
+    <string name="fragment_card_details_defense_txt">Defense:</string>
+    <string name="fragment_card_details_link_classification_txt">Lien de classification:</string>
+    <string name="fragment_card_details_description_txt">Description:</string>
+
+    <!-- ************************************************ -->
+    <!-- Card details fragment -->
+    <!-- ************************************************ -->
+
+    <!-- Filter fragment -->
+    <string name="fragment_home_card_hint">Rechercher une carte : </string>
+    <string name="fragment_filter_sort_txt">Trier par : </string>
+
+    <string-array name="sort_type_array">
+        <item>Nom</item>
+        <item>Date</item>
+        <item>Achèvement</item>
+    </string-array>
+
+
+    <!-- Edition fragment -->
+    <string name="fragment_edition_search_hit">Rechercher une édition…</string>
+
+    <!-- Cards fragment -->
+
+</resources>

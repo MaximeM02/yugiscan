@@ -1,0 +1,11 @@
+{
+    "http": {"level":"debug","cmd_output":false,"excludes":{"all":[
+      "GET / ", "/status", "/assets/", "/favicon"
+    ]}},
+    "api": {"level":"info"},
+    "tests": {"level":"info"},
+    "requests": {"level":"info"},
+    "users": {"level":"info"},
+    "database": {"level":"info"},
+    "alpha": {"level":"info"}
+  }
